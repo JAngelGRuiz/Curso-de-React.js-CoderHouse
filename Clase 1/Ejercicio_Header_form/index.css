@@ -32,6 +32,16 @@
     align-items: center;
 }
 
+.form-content {
+    background-color: cadetblue;
+    width: 70%;
+    height: 90px;
+    margin: 70px auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
 input{
    width: 220px;
    height: 30px;
