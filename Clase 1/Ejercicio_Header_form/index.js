@@ -9,7 +9,6 @@ if(text.childNodes.length === 0){
     text.style.display = 'none'
 }
 
-
 function onChange(event){
     login = {
       ...login,
@@ -24,7 +23,7 @@ function onSubmit(event){
         text.style.display = 'grid'
         text.innerHTML = `<h2> Tu correo es: ${login?.email}</h2>`
     }else{
-        alert("Llena los campos")
+      alert("Por favor, llena los campos")
     }
 }
 
