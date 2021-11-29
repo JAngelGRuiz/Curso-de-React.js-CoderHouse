@@ -1,0 +1,6 @@
+.cards-list-container{
+    width: 100%;
+    padding: 50px 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
