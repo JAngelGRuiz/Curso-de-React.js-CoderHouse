@@ -1,0 +1,23 @@
+.card-container{
+    height: 140px;
+    width: 120px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    margin: 10px;
+}
+
+.img-card{
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.card-title {
+    font-size: 14px;
+    text-align: center;
+}
