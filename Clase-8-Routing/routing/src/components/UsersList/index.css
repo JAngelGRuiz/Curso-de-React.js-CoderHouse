@@ -1,6 +1,9 @@
 .cards-list-container{
     width: 100%;
+    max-width: 1000px;
     padding: 50px 50px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
 }
