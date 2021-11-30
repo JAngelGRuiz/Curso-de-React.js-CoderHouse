@@ -1,13 +1,20 @@
 import { UserCard } from "../UserCard/UserCard"
 import './index.css'
+import { useContext } from "react"
+import UserContext from '../../context/context'
 
-const UsersList = ({ users, setCurrentUser }) => {
+const UsersList = ({ setCurrentUser }) => {
+    const { users } = useContext(UserContext)
     return(
         <div className="cards-list-container">
             {
               users.map((user) => {
                 return (
-                 <UserCard user={user} setCurrentUser={setCurrentUser} />
+                 <UserCard 
+                 key={user.login?.username} 
+                 user={user} 
+                 setCurrentUser={setCurrentUser} 
+                />
                 )
                })
             }

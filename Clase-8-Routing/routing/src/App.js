@@ -1,25 +1,27 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Header } from './components/Header/Header'
 import UserProfile from './components/UserProfile/UserProfile'
 import UsersList from './components/UsersList/UsersList'
+import { UserContext } from './context/context'
 
 function App() {
 
   const [currentUser, setCurrentUser] = useState({})
-  const [users, setUsers] = useState([])
-  useEffect(() => {
-    fetch('https://randomuser.me/api/?results=20')
-      .then(response => response.json())
-      .then(data => setUsers(data.results))
-  }, [])
   
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<UsersList users={users} setCurrentUser={setCurrentUser}  /> } />
-        <Route path="/profile/:userID" element={<UserProfile currentUser={currentUser} /> } />
-      </Routes>
-    </BrowserRouter>
+    <UserContext>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <UsersList 
+              setCurrentUser={setCurrentUser}  
+            /> } />
+          <Route path="/profile/:userID" element={<UserProfile currentUser={currentUser} /> } />
+        </Routes>
+      </BrowserRouter>
+    </UserContext>
   );
 }
 
