@@ -14,7 +14,7 @@ export const UserCard = ({ user, setCurrentUser }) => {
         >
           <div className="card-container">
             <img src={medium} alt={`${first}-${last}/${username}`} className="img-card" />  
-            <span className="card-title">Soy {first} {last}</span>
+            <span className="card-title">{first} {last}</span>
           </div>  
         </Link>
     )
